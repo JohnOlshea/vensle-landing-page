@@ -23,6 +23,7 @@ const isTouchDevice = () => {
 
 const navbar = document.getElementById('navbar');
 const nextHero = document.getElementById('nextHero');
+const about_p = this.document.getElementById('about_p');
 let typed = false;
 
 const textTypingEffect = (element, text, i=0) => {
@@ -50,7 +51,6 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove('active')
     }
 
-    const about_p = this.document.getElementById('about_p');
     let windowHeight = window.innerHeight;
     let aboutParaReveal = about_p.getBoundingClientRect().top;
     let aboutParaRevealPoint = 140;
