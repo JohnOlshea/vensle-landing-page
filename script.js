@@ -66,3 +66,34 @@ window.addEventListener('scroll', function() {
     }
 
 })
+
+//For Data
+function countup(element,start,end,duration) {
+    let startTime = null;
+    const step = (timestamp) => {
+        if(!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration,1);
+
+        element.textContent = Math.floor(progress * (end - start) + start).toLocaleString();
+
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        }
+    }
+    requestAnimationFrame(step);
+}
+
+const counter = document.getElementById('counter');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            counter.classList.add('visible');
+            countup(counter,0,4345256,2000);
+        }
+    });
+}, {
+    threshold:0.5
+})
+
+observer.observe(counter)
