@@ -636,3 +636,109 @@ section {
 #data div:nth-child(2) p{
     color: rgba(63, 201, 201, 1);
 }
+
+/* --------------- Testimonials ----------*/
+
+.testimonials h1 {
+    font-weight: 500;
+    font-size: 2.5em;
+}
+
+.slide-container {
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+.slide-content {
+    margin: 0 40px;
+    overflow: hidden;
+}
+
+.card {
+    cursor: none;
+    border-radius: 10px;
+    position: relative;
+}
+
+.card:hover {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+}
+
+.card .quotesImg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 40%;
+    width: 60px;
+    user-select: none;
+}
+
+.image-content,
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.image-content {
+    padding: 25px 0;
+}
+
+.card-image {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 3px;
+}
+
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card-content span {
+    color: #1E90FF;
+    font-size: 14px !important;
+    margin-bottom: 15px;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--txt-color);
+}
+
+.description {
+    font-size: 14px;
+    color: var(--light-txt);
+    text-align: center;
+}
+
+.card-content button {
+    bottom: none;
+    font-size: 14px;
+    padding: 8px 16px;
+    margin: 14px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #1E90FF;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active,
+.swiper-pagination-bullet-active-next,
+.swiper-pagination-bullet-active-next-next,
+.swiper-pagination-bullet-active-prev,
+.swiper-pagination-bullet-active-prev-prev {
+    background-color: #fff !important;
+}
